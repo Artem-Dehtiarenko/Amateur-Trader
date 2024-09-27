@@ -9,3 +9,5 @@
 
 # Ignore DVC cache
 /.dvc/
+/data
+/models
