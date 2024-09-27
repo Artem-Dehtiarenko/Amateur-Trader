@@ -1,0 +1,11 @@
+# Ignore data folder content
+/data/
+*.csv
+*.h5
+
+# Ignore models
+/models/
+*.pkl
+
+# Ignore DVC cache
+/.dvc/
