@@ -21,14 +21,30 @@ Two diagrams were created to illustrate the project’s workflow and interaction
     - APO_stock_data.csv
     - **processed/**
       - APO_processed_data.csv
-- **src/**
-  - preprocessing.py
-  - evaluation_metrics.py
-  - train_classification_model.py
-  - evaluate_model.py
+ - **diagrams/**
+    - activity_diagram.png
+    - use_case_diagram.png
 - **models/**
-  - trained_model.pkl
+  - **AHH/**
+    - AHH_model.pkl
+  - **APO/**
+    - APO_model.pkl
+- **src/**
+  - download_data.py
+  - evaluate_model.py
+  - evaluation_metrics.py
+  - input_data.py
+  - preprocess_data.py
+  - problem_definition.py
+  - target_variables.py
+  - train_classification_model.py
+  - train_model.py
+  - train_regression_model.py
+
+- **main.py**
 - **Dockerfile**
+- **dvc.yaml**
+- **.gitignore**
 - **requirements.txt**
 - **README.md**
      
