@@ -1,0 +1,53 @@
+schema: '2.0'
+stages:
+  preprocess_data:
+    cmd: python src/preprocess_data.py
+    deps:
+    - path: data/AHH/AHH_stock_data.csv
+      md5: a2d2a336be15a1d25a7fa76d90a131fa
+      size: 125992
+    - path: data/APO/APO_stock_data.csv
+      md5: a90861ec10aaf066919971271fb1c0ca
+      size: 184645
+    outs:
+    - path: data/AHH/processed/AHH_processed.csv
+      md5: 7d5283b31b4c006ba7ccaa095466b825
+      size: 146381
+    - path: data/APO/processed/APO_processed.csv
+      md5: ca18f92852ba89c06b7b58f79bc30161
+      size: 213565
+  train_model:
+    cmd: python src/train_model.py
+    deps:
+    - path: data/AHH/processed/AHH_processed.csv
+      md5: 7d5283b31b4c006ba7ccaa095466b825
+      size: 146381
+    - path: data/APO/processed/APO_processed.csv
+      md5: ca18f92852ba89c06b7b58f79bc30161
+      size: 213565
+    outs:
+    - path: models/AHH/AHH_model.pkl
+      md5: 8dcc1375a7aa7a9214f8629ddd9c13f5
+      size: 1017
+    - path: models/APO/APO_model.pkl
+      md5: fb1a7e7c383ab26c88a3fb02ece6f8ac
+      size: 1017
+  evaluate_model:
+    cmd: python src/evaluate_model.py
+    deps:
+    - path: src/evaluate_model.py
+      md5: 9cd5cc28ec0c4b73113a1ca775b043c0
+      size: 1356
+  download_data:
+    cmd: python src/download_data.py
+    deps:
+    - path: src/download_data.py
+      md5: 4960d521c6e00401139abeb0d0e2ce22
+      size: 403
+    outs:
+    - path: data/AHH/AHH_stock_data.csv
+      md5: a2d2a336be15a1d25a7fa76d90a131fa
+      size: 125992
+    - path: data/APO/APO_stock_data.csv
+      md5: a90861ec10aaf066919971271fb1c0ca
+      size: 184645
