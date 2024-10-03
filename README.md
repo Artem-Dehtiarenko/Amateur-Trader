@@ -12,26 +12,26 @@ Two diagrams were created to illustrate the project’s workflow and interaction
 ## Project Structure
 
 .aktienprognose
-├── data
-│   ├── AHH
-│   │   ├── AHH_stock_data.csv
-│   │   └── processed
-│   │       └── AHH_processed_data.csv
-│   ├── APO
-│   │   ├── APO_stock_data.csv
-│   │   └── processed
-│   │       └── APO_processed_data.csv
-├── src
-│   ├── preprocessing.py
-│   ├── evaluation_metrics.py
-│   ├── train_classification_model.py
-│   └── evaluate_model.py
-├── models
-│   └── trained_model.pkl
-├── Dockerfile
-├── requirements.txt
-└── README.md
-                     
+- **data/**
+  - **AHH/**
+    - AHH_stock_data.csv
+    - **processed/**
+      - AHH_processed_data.csv
+  - **APO/**
+    - APO_stock_data.csv
+    - **processed/**
+      - APO_processed_data.csv
+- **src/**
+  - preprocessing.py
+  - evaluation_metrics.py
+  - train_classification_model.py
+  - evaluate_model.py
+- **models/**
+  - trained_model.pkl
+- **Dockerfile**
+- **requirements.txt**
+- **README.md**
+     
           
 
 
